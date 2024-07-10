@@ -130,8 +130,18 @@ const style = document.createElement("style");
               const t = e.target.dataset.imagesToggle;
               document.querySelectorAll(".gallery-item").forEach((e) => {
                 const i = e.closest(".item-column");
-                i.style.display =
-                  "all" === t || e.dataset.galleryTag === t ? "block" : "none";
+                if ("all" === t || e.dataset.galleryTag === t) {
+                  i.style.display = "block";
+                  i.style.opacity = 0;
+                  i.style.transform = "translateX(-50%)";
+                  setTimeout(() => {
+                    i.style.transition = "opacity 0.5s, transform 0.5s";
+                    i.style.opacity = 1;
+                    i.style.transform = "translateX(0)";
+                  }, 10); // Ajout d'un léger délai pour que la transition s'applique correctement
+                } else {
+                  i.style.display = "none";
+                }
               });
             })(e),
             e.target.classList.contains("mg-prev") &&
