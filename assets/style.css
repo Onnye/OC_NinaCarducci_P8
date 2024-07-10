@@ -225,6 +225,33 @@ input[type="submit"] {
   background-color: #beb45a;
   padding: 0.5em 1em;
 }
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2em 0;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2em;
+}
+.footer-info p {
+  margin: 0.5em 0;
+}
+.footer-info strong {
+  font-size: 1.2em;
+}
+.footer-bottom {
+  margin-top: 1em;
+  border-top: 1px solid #555;
+  padding-top: 1em;
+}
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9em;
+}
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
@@ -295,6 +322,9 @@ input[type="submit"] {
     bottom: 0;
     right: 0;
     z-index: -1;
+  }
+  .footer .container {
+    padding: 0 1em;
   }
 }
 @media all and (max-width: 650px) {
