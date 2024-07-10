@@ -85,6 +85,7 @@ img {
   font-size: 30px;
 }
 .about-me__introduction {
+  font-size: 16px;
   font-family: "Spectral";
   font-weight: 800;
   font-style: italic;
@@ -104,12 +105,13 @@ img {
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
+  color: #000;
   background-color: #beb45a;
   border-radius: 0;
 }
 .nav-pills .nav-link {
   color: #000;
+  cursor: pointer;
 }
 .item-column {
   position: relative;
